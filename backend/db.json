@@ -1,0 +1,173 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Complete Web Development Bootcamp",
+      "instructor": "Arjun Sharma",
+      "category": "Web Development",
+      "price": 2499,
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "2",
+      "title": "React.js From Beginner to Advanced",
+      "instructor": "Priya Nair",
+      "category": "Web Development",
+      "price": 1999,
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "3",
+      "title": "Python Programming Masterclass",
+      "instructor": "Rahul Verma",
+      "category": "Programming",
+      "price": 1799,
+      "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "4",
+      "title": "UI/UX Design Fundamentals",
+      "instructor": "Sneha Rao",
+      "category": "Design",
+      "price": 1499,
+      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "5",
+      "title": "Data Analytics with Power BI",
+      "instructor": "Karan Mehta",
+      "category": "Data Science",
+      "price": 2199,
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "6",
+      "title": "JavaScript Essentials",
+      "instructor": "Aisha Khan",
+      "category": "Programming",
+      "price": 1299,
+      "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "7",
+      "title": "Node.js and Express.js",
+      "instructor": "Vikram Patel",
+      "category": "Backend Development",
+      "price": 2299,
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "8",
+      "title": "MongoDB Database Masterclass",
+      "instructor": "Neha Kulkarni",
+      "category": "Database",
+      "price": 1599,
+      "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "9",
+      "title": "Full Stack MERN Development",
+      "instructor": "Aditya Rao",
+      "category": "Web Development",
+      "price": 3499,
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "10",
+      "title": "HTML and CSS for Beginners",
+      "instructor": "Meera Joshi",
+      "category": "Web Development",
+      "price": 999,
+      "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "11",
+      "title": "Java Programming Complete Course",
+      "instructor": "Rohan Desai",
+      "category": "Programming",
+      "price": 1899,
+      "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "12",
+      "title": "Machine Learning Fundamentals",
+      "instructor": "Ananya Gupta",
+      "category": "Artificial Intelligence",
+      "price": 2799,
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "13",
+      "title": "Generative AI for Developers",
+      "instructor": "Kabir Malhotra",
+      "category": "Artificial Intelligence",
+      "price": 2999,
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "14",
+      "title": "Cybersecurity Essentials",
+      "instructor": "Farhan Ahmed",
+      "category": "Cybersecurity",
+      "price": 1999,
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "15",
+      "title": "Cloud Computing with AWS",
+      "instructor": "Pooja Menon",
+      "category": "Cloud Computing",
+      "price": 2499,
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "16",
+      "title": "DevOps and CI/CD Fundamentals",
+      "instructor": "Siddharth Jain",
+      "category": "DevOps",
+      "price": 2699,
+      "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "17",
+      "title": "Python for Data Science",
+      "instructor": "Ishita Rao",
+      "category": "Data Science",
+      "price": 2199,
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "18",
+      "title": "Advanced Git and GitHub",
+      "instructor": "Manish Kumar",
+      "category": "Developer Tools",
+      "price": 899,
+      "image": "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "19",
+      "title": "Responsive Web Design",
+      "instructor": "Divya Shetty",
+      "category": "Web Development",
+      "price": 1199,
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop"
+    },
+    {
+      "id": "20",
+      "title": "Mobile App Development with Flutter",
+      "instructor": "Akash Bhat",
+      "category": "App Development",
+      "price": 2399,
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+    }
+  ],
+  "users": [
+    {
+      "name": "john doe",
+      "email": "john123@abc.com",
+      "password": "John123",
+      "id": "cR4y-58IP9g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
