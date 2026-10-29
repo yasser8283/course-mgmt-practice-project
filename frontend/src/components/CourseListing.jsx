@@ -1,8 +1,7 @@
-import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import CourseCard from './CourseCard'
-import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
 
 const CourseListing = () => {
 
@@ -49,6 +48,7 @@ const CourseListing = () => {
         <main className="min-h-screen bg-slate-950 px-4 py-8 font-mono text-slate-100 sm:px-6 sm:py-12 lg:px-8">
             <div aria-hidden="true" className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-slate-800/70 via-slate-950 to-slate-950" />
             <div className="relative mx-auto w-full max-w-7xl">
+                <Navbar />
                 <header className="mb-8 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl shadow-black/20 sm:mb-10">
                     <div className="flex items-center gap-2 border-b border-slate-800 bg-slate-900/90 px-4 py-3">
                         <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
@@ -56,22 +56,14 @@ const CourseListing = () => {
                         <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
                         <span className="ml-3 text-xs text-slate-500">course-catalog.jsx</span>
                     </div>
-                    <div className="flex flex-col gap-6 px-5 py-7 sm:flex-row sm:items-end sm:justify-between sm:px-8 sm:py-9">
-                        <div>
-                            <p className="text-sm text-emerald-400"><span className="text-slate-500">const</span> catalog = <span className="text-amber-300">"learn, build, repeat"</span>;</p>
-                            <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                                Explore courses<span className="text-emerald-400">_</span>
-                            </h1>
-                            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400 sm:text-base">
-                                Find your next skill, one line of code at a time.
-                            </p>
-                        </div>
-                        <Link
-                            to="/wishlist"
-                            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-pink-500/30 bg-pink-500/10 px-4 py-2 text-sm font-semibold text-pink-300 transition hover:border-pink-400 hover:bg-pink-500 hover:text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400"
-                        >
-                            Wishlist
-                        </Link>
+                    <div className="px-5 py-7 sm:px-8 sm:py-9">
+                        <p className="text-sm text-emerald-400"><span className="text-slate-500">const</span> catalog = <span className="text-amber-300">"learn, build, repeat"</span>;</p>
+                        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                            Explore courses<span className="text-emerald-400">_</span>
+                        </h1>
+                        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400 sm:text-base">
+                            Find your next skill, one line of code at a time.
+                        </p>
                     </div>
                 </header>
 
