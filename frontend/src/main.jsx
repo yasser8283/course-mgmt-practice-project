@@ -3,14 +3,17 @@ import { ToastContainer } from 'react-toastify'
 import './App.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router'
-import WishListProvider from './context/WishListContext.jsx'
+import WishListProvider from './context/WishListProvider.jsx'
+import AuthProvider from './context/AuthContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <WishListProvider>
-      <App />
-      <ToastContainer position='top-right' autoClose={2000} />
-    </WishListProvider>
+    <AuthProvider>
+      <WishListProvider>
+        <App />
+        <ToastContainer position='top-right' autoClose={2000} />
+      </WishListProvider>
+    </AuthProvider>
   </BrowserRouter>
 
 )

@@ -31,7 +31,7 @@ const SignupPage = () => {
         }
         const res = await axios.get(`http://localhost:3000/users?email=${userEmail}`)
         if (res.data.length > 0) {
-            toast.error("Email already exists")
+            toast.error("User already exists")
             return;
         }
 

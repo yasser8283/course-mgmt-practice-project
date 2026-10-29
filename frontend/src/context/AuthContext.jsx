@@ -8,7 +8,12 @@ const useAuthContext = () =>{
 }
 
 const AuthProvider = ({ children })=>{
-    const [loginContext, setloginContext] = useState(null)
+    const savedData = localStorage.getItem('loggedInUser')
+    const [loginContext, setloginContext] = useState(
+        savedData ? JSON.parse(savedData) : null
+    )
+
+    localStorage.getItem('loggedInUser')
 
     return(
         <AuthContext.Provider value={ { loginContext,setloginContext} }>

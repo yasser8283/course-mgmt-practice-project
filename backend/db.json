@@ -167,6 +167,30 @@
       "email": "john123@abc.com",
       "password": "John123",
       "id": "cR4y-58IP9g"
+    },
+    {
+      "name": "alice hamilton",
+      "email": "alice123@email.com",
+      "password": "alice123",
+      "id": "oN4LR6Bo-4g"
+    }
+  ],
+  "wishlist": [
+    {
+      "userId": "oN4LR6Bo-4g",
+      "courseIds": [
+        "12"
+      ],
+      "id": "VZ2epULeWXQ"
+    },
+    {
+      "userId": "cR4y-58IP9g",
+      "courseIds": [
+        "7",
+        "3",
+        "2"
+      ],
+      "id": "7GUlmADtkJs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

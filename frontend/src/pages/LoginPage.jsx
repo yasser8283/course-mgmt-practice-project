@@ -4,25 +4,41 @@ import { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import { useAuthContext } from '../context/AuthContext'
 
 const LoginPage = () => {
     const [loginEmail, setloginEmail] = useState("")
     const [loginPassword, setloginPassword] = useState("")
+    const [showPassword, setshowPassword] = useState(false)
+
+    const { loginContext, setloginContext } = useAuthContext();
 
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.get(`http://localhost:3000/users?email=${loginEmail.toLowerCase().trim()}`)
+            if(loginEmail==="" || loginPassword=== ""){
+                toast.error("Please fill out all the fields")
+                return;
+            }
+            const res = await axios.get(`http://localhost:3000/users?email=${loginEmail.trim().toLowerCase()}`)
             const loginData = res.data;
             if (loginData.length <= 0) {
                 toast.error("Invalid User");
                 return;
             }
-            const [{ email, password }] = loginData;
+            const [{ email, password, id, name }] = loginData;
 
-            if (loginEmail == email && loginPassword == password) {
+            if (loginEmail.trim().toLowerCase() == email && loginPassword === password) {
+                setloginContext({
+                    userName: name,
+                    userId: id
+                })
+                localStorage.setItem('loggedInUser',JSON.stringify({
+                    userName: name,
+                    userId: id
+                }))
                 toast.success("Login Succesful. Welcome back!");
                 navigate('/courses')
             }
@@ -34,8 +50,6 @@ const LoginPage = () => {
         catch {
             toast.error("Some error occured")
         }
-
-
     }
 
     return (
@@ -155,11 +169,12 @@ const LoginPage = () => {
                                             onChange={((e) => setloginPassword(e.target.value))}
                                             id="login-password"
                                             name="password"
-                                            type="password"
+                                            type={showPassword?"text":"password"}
                                             autoComplete="current-password"
                                             placeholder="Enter your password"
                                             className="min-w-0 flex-1 bg-transparent py-3 text-sm text-slate-100 outline-none placeholder:text-slate-500"
                                         />
+                                        <button onClick={()=>setshowPassword(prev=>!prev)} type="button">Show</button>
                                     </div>
                                 </div>
 

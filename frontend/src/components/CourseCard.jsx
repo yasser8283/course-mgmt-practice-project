@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useWishList } from '../context/WishListContext';
+import { useWishList } from '../context/WishListProvider';
 import { Heart } from 'lucide-react'
 import { toast } from 'react-toastify';
 
@@ -9,24 +9,15 @@ const CourseCard = ({ data }) => {
     let { id, title, instructor, category, price, image } = data;
     // console.log(data);
     // console.log(id);
-    const { WishList, setWishList } = useWishList();
+    const { WishList, toggleWishList } = useWishList();
     // console.log("CourseCard state:", WishList);
     const isWishListed = WishList.includes(id)
 
 
 
     const handleWishList = () => {
-        const isSaved = WishList.includes(id);
-        setWishList((prevWishList)=>{
-            if(isSaved){
-                return prevWishList.filter((idx)=>idx!=id)
-            }
-            else{
-                return [...WishList,id]
-            }
-        })
-        isSaved ? toast.success("Course removed from Wishlist") : toast.success("Course added to Wishlist")
-    };
+        toggleWishList(id);
+    }
 
     return (
         <div className="w-full max-w-sm overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:shadow-emerald-950/30">

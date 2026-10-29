@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Heart } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import CourseCard from '../components/CourseCard'
-import { useWishList } from '../context/WishListContext'
+import { useWishList } from '../context/WishListProvider'
 
 const WishListPage = () => {
     const [courseData, setCourseData] = useState([])

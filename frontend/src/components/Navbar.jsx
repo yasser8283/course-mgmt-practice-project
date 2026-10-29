@@ -1,11 +1,20 @@
 import { BookOpen, Heart, LogIn, LogOut, UserRound } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { useAuthContext } from '../context/AuthContext'
+
+
 
 
 const Navbar = () => {
 
-    const { loginContext } = useAuthContext();
+    const { loginContext, setloginContext } = useAuthContext();
+    const navigate = useNavigate();
+
+    const handleLogout = () =>{
+        setloginContext(null);
+        localStorage.removeItem('loggedInUser')
+        navigate('/login')
+    }
 
     return (
         <nav
@@ -36,13 +45,15 @@ const Navbar = () => {
                                     <span className="font-semibold text-slate-100">{loginContext.userName}</span>
                                 </span>
                             </span>
-                            <Link
-                                to="/login"
+                            <button
+                                type='button'
+                                onClick={handleLogout}
+                                
                                 className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-xs font-semibold text-slate-300 transition hover:border-rose-400/40 hover:bg-rose-500/10 hover:text-rose-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-400 sm:text-sm"
                             >
                                 <LogOut aria-hidden="true" className="h-4 w-4" />
                                 Logout
-                            </Link>
+                            </button>
                         </div>
                     ) : (
                         <Link
