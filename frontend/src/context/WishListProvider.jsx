@@ -43,6 +43,7 @@ const WishListProvider = ({ children }) => {
     const toggleWishList = async (courseId) => {
         const updatedWishList = WishList.includes(courseId) ? (
             WishList.filter((idx) => idx !== courseId)
+            // toast.success("Removed from Wishlist")
         ) :
             (
                 [...WishList, courseId]
@@ -59,7 +60,7 @@ const WishListProvider = ({ children }) => {
                         }
                     )
                     setWishList(updatedWishList)
-                    toast.success("Added to Wishlist")
+                    toast.success("Wishlist Updated")
                 }
                 catch (err) {
                     console.error(err)

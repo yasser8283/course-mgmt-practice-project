@@ -18,7 +18,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            if(loginEmail==="" || loginPassword=== ""){
+            if (loginEmail === "" || loginPassword === "") {
                 toast.error("Please fill out all the fields")
                 return;
             }
@@ -28,16 +28,18 @@ const LoginPage = () => {
                 toast.error("Invalid User");
                 return;
             }
-            const [{ email, password, id, name }] = loginData;
+            const [{ email, password, id, name, role }] = loginData;
 
             if (loginEmail.trim().toLowerCase() == email && loginPassword === password) {
                 setloginContext({
                     userName: name,
-                    userId: id
+                    userId: id,
+                    role: role
                 })
-                localStorage.setItem('loggedInUser',JSON.stringify({
+                localStorage.setItem('loggedInUser', JSON.stringify({
                     userName: name,
-                    userId: id
+                    userId: id,
+                    role: role
                 }))
                 toast.success("Login Succesful. Welcome back!");
                 navigate('/courses')
@@ -169,12 +171,12 @@ const LoginPage = () => {
                                             onChange={((e) => setloginPassword(e.target.value))}
                                             id="login-password"
                                             name="password"
-                                            type={showPassword?"text":"password"}
+                                            type={showPassword ? "text" : "password"}
                                             autoComplete="current-password"
                                             placeholder="Enter your password"
                                             className="min-w-0 flex-1 bg-transparent py-3 text-sm text-slate-100 outline-none placeholder:text-slate-500"
                                         />
-                                        <button onClick={()=>setshowPassword(prev=>!prev)} type="button">Show</button>
+                                        <button onClick={() => setshowPassword(prev => !prev)} type="button">Show</button>
                                     </div>
                                 </div>
 

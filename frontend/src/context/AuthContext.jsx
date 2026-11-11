@@ -12,6 +12,7 @@ const AuthProvider = ({ children })=>{
     const [loginContext, setloginContext] = useState(
         savedData ? JSON.parse(savedData) : null
     )
+    // console.log(loginContext)
 
     localStorage.getItem('loggedInUser')
 

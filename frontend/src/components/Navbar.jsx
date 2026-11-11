@@ -42,7 +42,7 @@ const Navbar = () => {
                                 <UserRound aria-hidden="true" className="h-4 w-4 shrink-0 text-emerald-400" />
                                 <span>
                                     <span className="text-slate-500">Welcome, </span>
-                                    <span className="font-semibold text-slate-100">{loginContext.userName}</span>
+                                    <span className="font-semibold text-slate-100">{loginContext?.userName}</span>
                                 </span>
                             </span>
                             <button
