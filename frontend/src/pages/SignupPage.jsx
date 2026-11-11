@@ -39,7 +39,8 @@ const SignupPage = () => {
             {
                 name: userName,
                 email: userEmail,
-                password: userPassword
+                password: userPassword,
+                role: "user"
             })
         toast.success("User registered. Welcome!")
         navigate("/login")
