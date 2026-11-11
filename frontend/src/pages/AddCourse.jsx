@@ -20,8 +20,8 @@ const AddCourse = () => {
     e.preventDefault();
     setIsSubmitting(true)
     const courseData = {
-      title: courseName,
-      instructor: courseInstructor,
+      title: courseName.trim(),
+      instructor: courseInstructor.trim(),
       category: courseCategory,
       price: coursePrice,
       image: courseImg
